@@ -38,6 +38,10 @@ history.addListener('error', function(err) {
     console.dir(err);
 });
 
+history.addListener('retry', function(retryCount, retries) {
+    console.log("Problem recieving history, trying again in 10 seconds. (" + (retryCount + 1) + "/" + retries + ")");
+});
+
 info.addListener('success', function(user) {
     console.log('Fetching history for ' + username + ' (' + user.playcount + ' tracks)');
     history.start();
