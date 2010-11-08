@@ -29,7 +29,7 @@ history.addListener('tracks', function(tracks, meta) {
     console.log('Received page ' + meta.page + ' of ' + meta.totalPages + ' (' + tracks.length + '/' + totalTracks + ' tracks) from ' + simpleDate(secondTrack.date.uts) + ' to ' + simpleDate(lastTrack.date.uts));
 });
 
-history.addListener('complete', function(trackInfo) {
+history.addListener('complete', function(tracks, meta) {
     console.log('Done, fetched ' + totalTracks + ' total tracks');
 });
 
