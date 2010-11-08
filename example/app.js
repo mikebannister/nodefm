@@ -23,7 +23,7 @@ var totalTracks = 0;
 history.addListener('tracks', function(tracks, meta) {
     var lastTrack = _.last(tracks);
     // Using second track because the first could be currently playing with no date
-    var secondTrack = _.first(tracks);
+    var secondTrack = tracks[1];
 
     totalTracks = totalTracks + tracks.length;
     console.log('Received page ' + meta.page + ' of ' + meta.totalPages + ' (' + tracks.length + '/' + totalTracks + ' tracks) from ' + simpleDate(secondTrack.date.uts) + ' to ' + simpleDate(lastTrack.date.uts));
