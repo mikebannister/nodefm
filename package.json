@@ -3,7 +3,7 @@
     "description": "Some tools for talking to last.fm API",
     "version": "0.0.1",
     "author": "Mike Bannister <mikebannister@gmail.com>",
-    "engine": [ "node >= 0.2.0"],
+    "engine": [ "node >= 0.2.4"],
     "directories": { "lib": "./lib/nodefm" },
     "main": "./lib/nodefm/index"
 }
